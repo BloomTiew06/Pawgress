@@ -1,0 +1,95 @@
+/*
+ * Pawgress design tokens: Storybook Ink.
+ * Ink on cool paper, hand-lettered headings, wobbly hand-cut corners,
+ * and printed "ink offset" shadows instead of soft blur.
+ * Components only ever use these variables, never raw values.
+ */
+:root {
+  /* Paper and ink */
+  --paper: #E6ECF1;
+  --paper-raised: #F3F6F9;
+  --paper-sunk: #D9E1E9;
+  --ink: #26344F;
+  --ink-soft: #4F5D76;
+  --ink-faint: #7D889C;
+  --rule: #B6C2D1;
+
+  /* Watercolor accents */
+  --coral: #D98C7A;
+  --coral-wash: #F3D8D0;
+  --sage: #A9C4A3;
+  --sage-wash: #DCE8D8;
+  --honey: #E2B05A;
+  --honey-wash: #F5E3BE;
+  --sky: #9FB7CF;
+  --sky-wash: #D6E2EE;
+
+  /* Meaning */
+  --mood-thriving: var(--sage);
+  --mood-thriving-wash: var(--sage-wash);
+  --mood-okay: var(--honey);
+  --mood-okay-wash: var(--honey-wash);
+  --mood-sad: var(--sky);
+  --mood-sad-wash: var(--sky-wash);
+  --treat: var(--honey);
+  --celebrate: var(--coral);
+  --focus: #3E6FB0;
+
+  /* Type */
+  --font-hand: "Gochi Hand", "Comic Sans MS", "Chalkboard SE", cursive;
+  --font-body: "Literata", Georgia, "Times New Roman", serif;
+  --text-xs: 12px;
+  --text-sm: 13.5px;
+  --text-md: 15.5px;
+  --text-lg: 18px;
+  --hand-sm: 20px;
+  --hand-md: 26px;
+  --hand-lg: 34px;
+  --hand-xl: 44px;
+  --leading: 1.5;
+  --label-tracking: 0.08em;
+
+  /* Space (4px grid) */
+  --s1: 4px;
+  --s2: 8px;
+  --s3: 12px;
+  --s4: 16px;
+  --s5: 20px;
+  --s6: 24px;
+  --s8: 32px;
+  --s12: 48px;
+
+  /* Hand-cut corners: every radius is slightly uneven on purpose */
+  --radius-sm: 8px 10px 7px 11px;
+  --radius-md: 14px 18px 12px 20px;
+  --radius-lg: 20px 26px 18px 28px;
+  --radius-round: 999px;
+
+  /* Lines and printed shadows */
+  --line-w: 1.5px;
+  --line: var(--line-w) solid var(--ink);
+  --line-soft: var(--line-w) dashed var(--rule);
+  --lift-1: 0 2px 0 var(--ink);
+  --lift-2: 0 4px 0 var(--ink);
+
+  /* Motion */
+  --dur-fast: 120ms;
+  --dur: 220ms;
+  --dur-slow: 420ms;
+  --ease-out: cubic-bezier(.2, .8, .2, 1);
+  --ease-bounce: cubic-bezier(.34, 1.56, .64, 1);
+
+  /* Layout */
+  --content-max: 1040px;
+  --tabbar-h: 64px;
+
+  color-scheme: light;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --dur-fast: 0ms;
+    --dur: 0ms;
+    --dur-slow: 0ms;
+  }
+}
